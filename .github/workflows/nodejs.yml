@@ -1,4 +1,4 @@
-name: linter
+name: Tests and Linter
 on: push
 jobs:
   my-job:
@@ -12,6 +12,6 @@ jobs:
       - name: lint
         run: |
           make lint
-      - name: lint
+      - name: tests
         run: |
           make test-coverage
