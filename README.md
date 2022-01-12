@@ -8,3 +8,7 @@ ___
 #### Разница между JSON файлами:
 
 [![asciicast](https://asciinema.org/a/459211.svg)](https://asciinema.org/a/459211)
+
+#### Разница между YAML файлами:
+
+[![asciicast](https://asciinema.org/a/l7vKNbagXpmCpmcQac7LY0I1T.svg)](https://asciinema.org/a/l7vKNbagXpmCpmcQac7LY0I1T)
