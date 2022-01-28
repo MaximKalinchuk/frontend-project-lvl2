@@ -5,10 +5,14 @@
 
 ### **Демонстрация работы программы:**
 ___
-#### Разница между JSON файлами:
+#### Сравнение плоских JSON файлов:
 
 [![asciicast](https://asciinema.org/a/459211.svg)](https://asciinema.org/a/459211)
 
-#### Разница между YAML файлами:
+#### Сравнение плоских YAML файлов:
 
 [![asciicast](https://asciinema.org/a/l7vKNbagXpmCpmcQac7LY0I1T.svg)](https://asciinema.org/a/l7vKNbagXpmCpmcQac7LY0I1T)
+
+#### Рекурсивное стравнение JSON и YAML файлов:
+
+[![asciicast](https://asciinema.org/a/465144.svg)](https://asciinema.org/a/465144)

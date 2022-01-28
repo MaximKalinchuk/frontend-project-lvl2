@@ -11,7 +11,7 @@ export default (filepath) => {
   if (format === '.json') {
     return JSON.parse(readFileSync(filepath));
   }
-  return null;
+  return filepath;
 };
 
 // const file1 = JSON.parse(readFileSync(path.join(process.cwd(), filepath1)));
