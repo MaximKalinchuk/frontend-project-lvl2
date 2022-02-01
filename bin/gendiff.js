@@ -7,9 +7,9 @@ const program = new Command();
 program
   .description('Compares two configuration files and shows a difference.')
   .version('0.0.1', '-v, --version', 'output the current version')
-  .option('-f, --format [type]', 'output format', 'stylish')
+  .option('-f, --format <type>', 'output format', 'stylish')
   .argument('<filepath1>')
   .argument('<filepath2>')
-  .action((filepath1, filepath2) => genDiff(filepath1, filepath2));
+  .action((filepath1, filepath2, option) => genDiff(filepath1, filepath2, option.format));
 
 program.parse();

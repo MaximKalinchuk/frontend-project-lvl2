@@ -16,3 +16,7 @@ ___
 #### Рекурсивное стравнение JSON и YAML файлов:
 
 [![asciicast](https://asciinema.org/a/465144.svg)](https://asciinema.org/a/465144)
+
+#### Плоский формат сравнения JSON и YAML файлов:
+
+[![asciicast](https://asciinema.org/a/465944.svg)](https://asciinema.org/a/465944)

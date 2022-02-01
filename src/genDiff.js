@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import parse from './parsers.js';
-import formater from './stylish.js';
+// import stylish from './formatters/stylish.js';
+// import plain from './formatters/plain.js';
+import selectFormat from './formatters/index.js';
 
 const getSortedKeys = (obj1, obj2) => {
   const keys1 = _.keys(obj1);
@@ -11,7 +13,7 @@ const getSortedKeys = (obj1, obj2) => {
   return sortedAllKeys;
 };
 
-const genDiff = (filepath1, filepath2) => {
+const genDiff = (filepath1, filepath2, formatName) => {
   const content1 = parse(filepath1);
   const content2 = parse(filepath2);
 
@@ -49,10 +51,9 @@ const genDiff = (filepath1, filepath2) => {
 
   const tree = buildTree(content1, content2);
   // console.log(tree);
-
-  const format = formater(tree);
-  console.log(format);
-  return format;
+  const resultTree = selectFormat(tree, formatName);
+  console.log(resultTree);
+  return resultTree;
 };
 
 export default genDiff;
