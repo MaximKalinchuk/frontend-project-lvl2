@@ -20,3 +20,7 @@ ___
 #### Плоский формат сравнения JSON и YAML файлов:
 
 [![asciicast](https://asciinema.org/a/465944.svg)](https://asciinema.org/a/465944)
+
+#### Вывод сравнения в JSON формате:
+
+[![asciicast](https://asciinema.org/a/466314.svg)](https://asciinema.org/a/466314)
