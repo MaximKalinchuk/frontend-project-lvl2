@@ -26,24 +26,24 @@
 * Воспользуйтесь командой для просмотра возможностей программы:
   * `gendiff -h`
 
-### **Пример использования:**
+### **Примеры использования:**
 ___
-#### Сравнение плоских JSON файлов:
+1. #### Сравнение плоских JSON файлов:
 
 [![asciicast](https://asciinema.org/a/459211.svg)](https://asciinema.org/a/459211)
 
-#### Сравнение плоских YAML файлов:
+2. #### Сравнение плоских YAML файлов:
 
 [![asciicast](https://asciinema.org/a/l7vKNbagXpmCpmcQac7LY0I1T.svg)](https://asciinema.org/a/l7vKNbagXpmCpmcQac7LY0I1T)
 
-#### Рекурсивное стравнение JSON и YAML файлов:
+3. #### Рекурсивное стравнение JSON и YAML файлов:
 
 [![asciicast](https://asciinema.org/a/465144.svg)](https://asciinema.org/a/465144)
 
-#### Плоский формат сравнения JSON и YAML файлов:
+4. #### Плоский формат сравнения JSON и YAML файлов:
 
 [![asciicast](https://asciinema.org/a/465944.svg)](https://asciinema.org/a/465944)
 
-#### Вывод сравнения в JSON формате:
+5. #### Вывод сравнения в JSON формате:
 
 [![asciicast](https://asciinema.org/a/466314.svg)](https://asciinema.org/a/466314)
