@@ -1,10 +1,10 @@
 import yaml from 'js-yaml';
 
 const getFormat = (format) => {
-  if (format === '.yaml') {
+  if (format === 'yaml') {
     return yaml.load;
   }
-  if (format === '.json') {
+  if (format === 'json') {
     return JSON.parse;
   }
   throw new Error('Wrong format');

@@ -39,13 +39,13 @@ const buildTree = (value1, value2) => {
 };
 
 const getFormat = (filepath) => {
-  const format = path.extname(filepath);
+  const format = path.extname(filepath).slice(1);
 
-  if (format === '.yaml' || format === '.yml') {
-    return '.yaml';
+  if (format === 'yaml' || format === 'yml') {
+    return 'yaml';
   }
-  if (format === '.json') {
-    return '.json';
+  if (format === 'json') {
+    return 'json';
   }
   throw new Error('Wrong format');
 };
