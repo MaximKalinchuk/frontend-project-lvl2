@@ -30,11 +30,11 @@
 ___
 1. #### Сравнение плоских JSON файлов:
 
-[![asciicast](https://asciinema.org/a/459211.svg)](https://asciinema.org/a/459211)
+[![asciicast](https://asciinema.org/a/468595.svg)](https://asciinema.org/a/468595)
 
 2. #### Сравнение плоских YAML файлов:
 
-[![asciicast](https://asciinema.org/a/l7vKNbagXpmCpmcQac7LY0I1T.svg)](https://asciinema.org/a/l7vKNbagXpmCpmcQac7LY0I1T)
+[![asciicast](https://asciinema.org/a/468594.svg)](https://asciinema.org/a/468594)
 
 3. #### Рекурсивное стравнение JSON и YAML файлов:
 
