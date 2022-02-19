@@ -2,7 +2,7 @@ import makePlainFormat from './plain.js';
 import makeStylishFormat from './stylish.js';
 import makeJsonFormat from './json.js';
 
-const selectFormat = (tree, formatName) => {
+const formatOutput = (tree, formatName) => {
   if (formatName === 'plain') {
     return makePlainFormat(tree);
   }
@@ -12,4 +12,4 @@ const selectFormat = (tree, formatName) => {
   return makeStylishFormat(tree);
 };
 
-export default selectFormat;
+export default formatOutput;

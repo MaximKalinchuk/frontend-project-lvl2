@@ -1,11 +1,16 @@
 import yaml from 'js-yaml';
 
-export default (content, format) => {
+const getFormat = (format) => {
   if (format === '.yaml') {
-    return yaml.load(content);
+    return yaml.load;
   }
   if (format === '.json') {
-    return JSON.parse(content);
+    return JSON.parse;
   }
   throw new Error('Wrong format');
+};
+
+export default (content, format) => {
+  const parse = getFormat(format);
+  return parse(content);
 };

@@ -2,7 +2,7 @@ import _ from 'lodash';
 import path from 'path';
 import { readFileSync } from 'fs';
 import parse from './parsers.js';
-import formater from './formatters/index.js';
+import formatOutput from './formatters/index.js';
 
 const getSortedKeys = (obj1, obj2) => {
   const keys1 = _.keys(obj1);
@@ -61,7 +61,7 @@ const genDiff = (filepath1, filepath2, formatName) => {
 
   const tree = buildTree(obj1, obj2);
 
-  return formater(tree, formatName);
+  return formatOutput(tree, formatName);
 };
 
 export default genDiff;
