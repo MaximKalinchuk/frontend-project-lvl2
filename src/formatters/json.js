@@ -1,3 +1,3 @@
-const makeJsonFormat = (objDiff) => JSON.stringify(objDiff);
+const formatJson = (objDiff) => JSON.stringify(objDiff, null, 2);
 
-export default makeJsonFormat;
+export default formatJson;

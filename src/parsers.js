@@ -1,6 +1,6 @@
 import yaml from 'js-yaml';
 
-const getFormat = (format) => {
+const getParser = (format) => {
   if (format === 'yaml') {
     return yaml.load;
   }
@@ -11,6 +11,6 @@ const getFormat = (format) => {
 };
 
 export default (content, format) => {
-  const parse = getFormat(format);
+  const parse = getParser(format);
   return parse(content);
 };

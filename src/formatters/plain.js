@@ -11,7 +11,7 @@ const stringify = (value) => {
   return value;
 };
 
-const makePlainFormat = (objDiff, path = []) => {
+const formatPlain = (objDiff, path = []) => {
   const correctItems = objDiff.filter(({ type }) => type !== 'unchanged');
   const result = [
     ...correctItems.map(({
@@ -27,7 +27,7 @@ const makePlainFormat = (objDiff, path = []) => {
       }
 
       if (type === 'object') {
-        return makePlainFormat(children, [...path, key]);
+        return formatPlain(children, [...path, key]);
       }
 
       if (type === 'changed') {
@@ -40,4 +40,4 @@ const makePlainFormat = (objDiff, path = []) => {
   return result;
 };
 
-export default makePlainFormat;
+export default formatPlain;

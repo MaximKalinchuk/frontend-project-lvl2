@@ -22,7 +22,7 @@ const stringify = (stringifiable, depth = 0) => {
   return iter(stringifiable, depth);
 };
 
-const makeStylishFormat = (objDiff) => {
+const formatStylish = (objDiff) => {
   const iter = (obj, depth = 0) => {
     const indent = '    '.repeat(depth);
     const result = [
@@ -52,4 +52,4 @@ const makeStylishFormat = (objDiff) => {
   return iter(objDiff, 0);
 };
 
-export default makeStylishFormat;
+export default formatStylish;

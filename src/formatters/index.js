@@ -1,15 +1,15 @@
-import makePlainFormat from './plain.js';
-import makeStylishFormat from './stylish.js';
-import makeJsonFormat from './json.js';
+import formatPlain from './plain.js';
+import formatStylish from './stylish.js';
+import formatJson from './json.js';
 
 const formatOutput = (tree, formatName) => {
   if (formatName === 'plain') {
-    return makePlainFormat(tree);
+    return formatPlain(tree);
   }
   if (formatName === 'json') {
-    return makeJsonFormat(tree);
+    return formatJson(tree);
   }
-  return makeStylishFormat(tree);
+  return formatStylish(tree);
 };
 
 export default formatOutput;
