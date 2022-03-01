@@ -12,32 +12,19 @@ const stringify = (value) => {
 };
 
 const formatPlain = (objDiff, path = []) => {
+  const formatterByNodeTypes = {
+    add: (value1, value2, children, filepath, key) => (`Property '${[...path, key].join('.')}' was added with value: ${stringify(value2)}`),
+    del: (value1, value2, children, filepath, key) => (`Property '${[...path, key].join('.')}' was removed`),
+    object: (value1, value2, children, filepath, key) => (formatPlain(children, [...path, key])),
+    changed: (value1, value2, children, filepath, key) => (`Property '${[...path, key].join('.')}' was updated. From ${stringify(value1)} to ${stringify(value2)}`),
+  };
+
   const correctItems = objDiff.filter(({ type }) => type !== 'unchanged');
-  const result = [
-    ...correctItems.map(({
-      key, value1, value2, type, children,
-    }) => {
-      const propetryFullName = [...path, key].join('.');
-      if (type === 'add') {
-        return `Property '${propetryFullName}' was added with value: ${stringify(value2)}`;
-      }
+  const resultItems = correctItems.map(({
+    key, value1, value2, type, children,
+  }) => formatterByNodeTypes[type](value1, value2, children, path, key));
 
-      if (type === 'del') {
-        return `Property '${propetryFullName}' was removed`;
-      }
-
-      if (type === 'object') {
-        return formatPlain(children, [...path, key]);
-      }
-
-      if (type === 'changed') {
-        return `Property '${propetryFullName}' was updated. From ${stringify(value1)} to ${stringify(value2)}`;
-      }
-
-      return '';
-    }),
-  ].join('\n');
-  return result;
+  return resultItems.join('\n');
 };
 
 export default formatPlain;
