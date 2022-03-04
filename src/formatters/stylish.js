@@ -22,7 +22,7 @@ const stringify = (stringifiable, depth = 0) => {
   return iter(stringifiable, depth);
 };
 
-const formatterByNodeTypes = {
+const formattersByNodeTypes = {
   add: (value1, value2, children, indent, key, identDepth) => (`${indent}  + ${key}: ${stringify(value2, identDepth + 1)}`),
   del: (value1, value2, children, indent, key, identDepth) => (`${indent}  - ${key}: ${stringify(value1, identDepth + 1)}`),
   object: (value1, value2, children, indent, key, identDepth, iter) => (`${indent}    ${key}: ${iter(children, identDepth + 1)}`),
@@ -39,7 +39,7 @@ const formatStylish = (objDiff) => {
 
     const resultItems = obj.map(({
       key, value1, value2, type, children,
-    }) => formatterByNodeTypes[type](value1, value2, children, indent, key, depth, iter));
+    }) => formattersByNodeTypes[type](value1, value2, children, indent, key, depth, iter));
 
     return [
       '{',
